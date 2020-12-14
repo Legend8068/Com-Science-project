@@ -1,4 +1,9 @@
 for num in range(1,51):
-    print(num)
-if num % 3 == 0:
-    print("tap")
+    if num%15==0:
+        print("taphat")
+    elif num%3==0:
+        print("tap")
+    elif num%5==0:
+        print("hat")
+    else:
+        print(num)
