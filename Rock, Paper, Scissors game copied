@@ -23,5 +23,5 @@ while player == False:
             print("You win!!")
     else:
         print("Check your spelling")
-    player = False
-    computer = t[randint(0,2)]
+player = False
+computer = t[randint(0,2)]
