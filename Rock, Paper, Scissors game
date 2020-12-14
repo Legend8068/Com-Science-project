@@ -1,0 +1,24 @@
+from random import randint
+choices=("Rock","Paper","Scissors")
+player = False
+computer =choices[randint(1,3)]
+while player == False
+if player == computer:
+        print("Tie")
+elif player == "Rock":
+    if computer == "Paper":
+        print("Computer chose Paper.You lost better luck next time")
+    else:
+        print("You win!!")
+elif player == "Paper":
+    if computer == "Scissors":
+        print("Computer chose Paper.You lost better luck next time")
+    else:
+        print("You win!!")
+elif player == "Scissors":
+    if computer == "Rock":
+        print("Computer chose Paper.You lost better luck next time")
+    else: 
+        print("You win!!")
+else:
+    print("Check your spelling")
