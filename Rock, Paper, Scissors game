@@ -1,3 +1,4 @@
+#Ma'am for some reason this does not work on repl.it but does work on python 3.9
 from random import randint
 choices=("Rock","Paper","Scissors")
 player = False
