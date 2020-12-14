@@ -1,4 +1,3 @@
-#Ma'am for some reason this does not work on python 3.9 but does work on repl.it
 num=int(input("How many numbers do you want;"))
 num1, num2 = 0,1
 count = 0
