@@ -1,5 +1,6 @@
 num=int(input("How many numbers do you want;"))
-num1, num2 = 0,1
+num1 = 0
+num2 = 1
 count = 0
 if num <= 0:
    print("Please enter a number above 0")
