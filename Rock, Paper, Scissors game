@@ -23,6 +23,6 @@ while player == False:
         else:
             print("Computer chose Rock, you win!!")
     else:
-        print("Check your spelling")
+        print("Please check your spelling")
     player = False
     computer = t[randint(0,2)]
