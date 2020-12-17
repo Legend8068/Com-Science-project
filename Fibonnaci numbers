@@ -1,4 +1,4 @@
-num=int(input("How many numbers do you want;"))
+num=int(input("How many numbers do you want:"))
 num1 = 0
 num2 = 1
 count = 0
