@@ -13,56 +13,64 @@ while player == False:
     if player == computer:
         print("Computer chose the same as you, its a tie!")
         ans = input("*Do you want to play again? Yes or No*:")
-        if ans == "Yes" or "YES" or "yes":
-            print(".Good Choice.")
-        else:
+        if ans == "NO" or "No" or "no":
+            print("~GAME OVER~")
             break
+        else:
+            print(".Good Choice.")
     elif player == "Rock":
         if computer == "Paper":
             print("Computer chose Paper.You lost, better luck next time")
             ans = input("*Do you want to play again? Yes or No*:")
-            if ans == "Yes" or "YES" or "yes":
-                print(".Good Choice.")
-            else:
+            if ans == "NO" or "No" or "no":
+                print("~GAME OVER~")
                 break
+            else:
+                print(".Good choice.")
         else:
             print("Computer chose Scissors, you win!!")
-            ans = input("*Do you want to play again? Yes or No*:")
-            if ans == "Yes" or "YES" or "yes":
-                print(".Good Choice.")
-            else:
+            ans = input("Do you want to play again? Yes or No:")
+            if ans == "NO" or "No" or "no":
+                print("~GAME OVER~")
                 break
+            else:
+                print(".Good Choice.")
     elif player == "Paper":
         if computer == "Scissors":
             print("Computer chose Scissors.You lost, better luck next time")
             ans = input("*Do you want to play again? Yes or No*:")
-            if ans == "Yes" or "YES" or "yes":
-                print(".Good Choice.")
-            else:
+            if ans == "NO" or "No" or "no":
+                print("~GAME OVER~")
                 break
+            else:
+                print(".Good Choice.")
         else:
             print("Computer chose Rock, you win!!")
             ans = input("*Do you want to play again? Yes or No*:")
-            if ans == "Yes" or "YES" or "yes":
-                print(".Good Choice.")
-            else:
+            if ans == "NO" or "No" or "no":
+                print("~GAME OVER~")
                 break
+            else:
+                print(".Good Choice.")
     elif player == "Scissors":
         if computer == "Rock":
             print("Computer chose Rock.You lost, better luck next time")
             ans = input("*Do you want to play again? Yes or No*:")
-            if ans == "Yes" or "YES" or "yes":
-                print(".Good Choice.")
-            else:
+            if ans == "NO" or "No" or "no":
+                print("~GAME OVER~")
                 break
+            else:
+                print(".Good Choice.")
         else:
             print("Computer chose Paper, you win!!")
             ans = input("*Do you want to play again? Yes or No*:")
-            if ans == "Yes" or "YES" or "yes":
-                print(".Good Choice.")
-            else:
+            if ans == "NO" or "No" or "no":
+                print("~GAME OVER~")
                 break
+            else:
+                print(".Good Choice.")
     else:
         print("Please check your spelling")
+    # This is written so that the code repeats
     player = False
     computer = c[randint(0,2)]
