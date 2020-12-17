@@ -1,28 +1,68 @@
 # I did take a little help for the 'False' Statements
 from random import randint
-t = ["Rock", "Paper", "Scissors"]
-computer = t[randint(0,2)]
+print("----------------------------------------------------------------")
+print("                         Welcome To My Game")
+print("----------------------------------------------------------------\n")
+print("_CHOOSE YOUR WEAPON_\n")
+c = ["Rock", "Paper", "Scissors"]
+computer = c[randint(0,2)]
 player = False
 while player == False:
     player = input("Rock, Paper or Scissors:")
+    print("Choosing...")
     if player == computer:
         print("Computer chose the same as you, its a tie!")
+        ans = input("*Do you want to play again? Yes or No*:")
+        if ans == "Yes" or "YES" or "yes":
+            print(".Good Choice.")
+        else:
+            break
     elif player == "Rock":
         if computer == "Paper":
             print("Computer chose Paper.You lost, better luck next time")
+            ans = input("*Do you want to play again? Yes or No*:")
+            if ans == "Yes" or "YES" or "yes":
+                print(".Good Choice.")
+            else:
+                break
         else:
             print("Computer chose Scissors, you win!!")
+            ans = input("Do you want to play again? Yes or No:")
+            if ans == "Yes" or "YES" or "yes":
+                print(".Good Choice.")
+            else:
+                break
     elif player == "Paper":
         if computer == "Scissors":
             print("Computer chose Scissors.You lost, better luck next time")
+            ans = input("*Do you want to play again? Yes or No*:")
+            if ans == "Yes" or "YES" or "yes":
+                print(".Good Choice.")
+            else:
+                break
         else:
             print("Computer chose Rock, you win!!")
+            ans = input("*Do you want to play again? Yes or No*:")
+            if ans == "Yes" or "YES" or "yes":
+                print(".Good Choice.")
+            else:
+                break
     elif player == "Scissors":
         if computer == "Rock":
             print("Computer chose Rock.You lost, better luck next time")
+            ans = input("*Do you want to play again? Yes or No*:")
+            if ans == "Yes" or "YES" or "yes":
+                print(".Good Choice.")
+            else:
+                break
         else:
             print("Computer chose Paper, you win!!")
+            ans = input("*Do you want to play again? Yes or No*:")
+            if ans == "Yes" or "YES" or "yes":
+                print(".Good Choice.")
+            else:
+                break
     else:
         print("Please check your spelling")
     player = False
-    computer = t[randint(0,2)]
+    computer = c[randint(0,2)]
