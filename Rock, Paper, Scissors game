@@ -11,17 +11,17 @@ while player == False:
         if computer == "Paper":
             print("Computer chose Paper.You lost, better luck next time")
         else:
-            print("Computer chose Paper, you win!!")
+            print("Computer chose Scissors, you win!!")
     elif player == "Paper":
         if computer == "Scissors":
             print("Computer chose Scissors.You lost, better luck next time")
         else:
-            print("Computer chose Scissors, you win!!")
+            print("Computer chose Rock, you win!!")
     elif player == "Scissors":
         if computer == "Rock":
             print("Computer chose Rock.You lost, better luck next time")
         else:
-            print("Computer chose Rock, you win!!")
+            print("Computer chose Paper, you win!!")
     else:
         print("Please check your spelling")
     player = False
