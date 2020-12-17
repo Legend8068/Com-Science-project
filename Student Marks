@@ -1,26 +1,35 @@
-OverallH = int(0)
-OverallL = int(100)
-OverallTot = int(0)
+OverallH = 0
+OverallL = 100
+OverallTot = 0
 Count = 0
-Subject_Name =("Maths","English","Science","IT")
-for subject in Subject_Name:
-    SubjectH = int(0)
-    SubjectL = int(100)
-    SubjectTot= int(0)
-    Subject_Name = input("Please enter the subjects name:")
-    Mark = int(input("Please enter students's marks:"))
-while Count < 601:
-    if  Mark < 101 and Mark > -1:
-        Mark < SubjectL
-        SubjectL == Mark
-    elif Mark < OverallL:
-        OverallL == Mark
-    elif Mark > SubjectH:
-        SubjectH == Mark
-    elif Mark > OverallH:
-        OverallH == Mark
-        Count += 1
-    elif Count > 2:
-        print("All students marks inputed")
-    else:
-        print("Please try again as mark is invalid")
+SubjectName = ["Maths","Science","English","IT"]
+for test in SubjectName:
+    input("Enter the subject's name:")
+    SubjectH = 0
+    SubjectL = 100
+    SubjectTot= 0
+while Count < 3:
+    Mark = int(input("Enter the students's marks:"))
+    if Mark < 101 and Mark > -1:
+        continue
+        if Mark < OverallL:
+            OverallL = Mark
+        elif Mark < SubjectL:
+            SubjectL = Mark
+        elif Mark > OverallH:
+            OverallH = Mark
+        elif Mark > SubjectH:
+            SubjectH = Mark
+            Count += 1
+        elif Count > 2:
+            print("All marks have been inputed")
+    OverallTot += Mark
+    SubjectTot += Mark
+SubjectAvg = SubjectTot/2
+OverallAvg = OverallAvg/4
+print("Subject highest is", SubjectH)
+print("Subject lowest is", SubjectL)
+print("Subject average is", SubjectAvg)
+print("Overall highest is", OverallH)
+print("Overall lowest is", OverallL)
+print("Overall average is", OverallAvg)
