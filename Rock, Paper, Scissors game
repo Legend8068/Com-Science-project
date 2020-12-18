@@ -4,6 +4,8 @@ print("----------------------------------------------------------------")
 print("                         Welcome To My Game")
 print("----------------------------------------------------------------\n")
 print("_CHOOSE YOUR WEAPON_\n")
+c_points = 0
+p_points = 0
 c = ["Rock", "Paper", "Scissors"]
 computer = c[randint(0,2)]
 player = False
@@ -12,65 +14,92 @@ while player == False:
     print("Choosing...")
     if player == computer:
         print("Computer chose the same as you, its a tie!")
-        ans = input("*Do you want to play again? Yes or No*:")
-        if ans == "NO" or "No" or "no":
-            print("~GAME OVER~")
-            break
-        else:
-            print(".Good Choice.")
+        answer = input("Do you want to play again")
+        while quit == False:
+            while True:
+                if answer == "yes" or "YES" or "Yes":
+                    quit == True
+                    break
+                elif answer == "no" or "NO" or "No":
+                    quit == False
+                    break 
     elif player == "Rock":
         if computer == "Paper":
             print("Computer chose Paper.You lost, better luck next time")
-            ans = input("*Do you want to play again? Yes or No*:")
-            if ans == "NO" or "No" or "no":
-                print("~GAME OVER~")
-                break
-            else:
-                print(".Good choice.")
+            c_points += 1
+            while quit == False:
+                while True:
+                    if answer == "yes" or "YES" or "Yes":
+                        quit == True
+                        break
+                    elif answer == "no" or "NO" or "No":
+                        quit == False
+                        break 
         else:
             print("Computer chose Scissors, you win!!")
-            ans = input("Do you want to play again? Yes or No:")
-            if ans == "NO" or "No" or "no":
-                print("~GAME OVER~")
-                break
-            else:
-                print(".Good Choice.")
+            p_points += 1
+            while quit == False:
+                while True:
+                    if answer == "yes" or "YES" or "Yes":
+                        quit == True
+                        break
+                    elif answer == "no" or "NO" or "No":
+                        quit == False
+                        break 
     elif player == "Paper":
         if computer == "Scissors":
             print("Computer chose Scissors.You lost, better luck next time")
-            ans = input("*Do you want to play again? Yes or No*:")
-            if ans == "NO" or "No" or "no":
-                print("~GAME OVER~")
-                break
-            else:
-                print(".Good Choice.")
+            c_points += 1
+            while quit == False:
+                while True:
+                    if answer == "yes" or "YES" or "Yes":
+                        quit == True
+                        break
+                    elif answer == "no" or "NO" or "No":
+                        quit == False
+                        break 
         else:
             print("Computer chose Rock, you win!!")
-            ans = input("*Do you want to play again? Yes or No*:")
-            if ans == "NO" or "No" or "no":
-                print("~GAME OVER~")
-                break
-            else:
-                print(".Good Choice.")
+            p_points += 1
+            while quit == False:
+                while True:
+                    if answer == "yes" or "YES" or "Yes":
+                        quit == True
+                        break
+                    elif answer == "no" or "NO" or "No":
+                        quit == False
+                        break 
     elif player == "Scissors":
         if computer == "Rock":
             print("Computer chose Rock.You lost, better luck next time")
-            ans = input("*Do you want to play again? Yes or No*:")
-            if ans == "NO" or "No" or "no":
-                print("~GAME OVER~")
-                break
-            else:
-                print(".Good Choice.")
+            c_points += 1
+            while quit == False:
+                while True:
+                    if answer == "yes" or "YES" or "Yes":
+                        quit == True
+                        break
+                    elif answer == "no" or "NO" or "No":
+                        quit == False
+                        break 
         else:
             print("Computer chose Paper, you win!!")
-            ans = input("*Do you want to play again? Yes or No*:")
-            if ans == "NO" or "No" or "no":
-                print("~GAME OVER~")
-                break
-            else:
-                print(".Good Choice.")
+            p_points += 1
+            while quit == False:
+                while True:
+                    if answer == "yes" or "YES" or "Yes":
+                        quit == True
+                        break
+                    elif answer == "no" or "NO" or "No":
+                        quit == False
+                        break 
     else:
         print("Please check your spelling")
     # This is written so that the code repeats
     player = False
     computer = c[randint(0,2)]
+print("Player points:",p_points)
+print("Computer points:",c_points)
+if p_points > c_points:
+    print("PLAYER WINS")
+else:
+    print("COMPUTER WINS")
