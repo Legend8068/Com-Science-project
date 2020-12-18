@@ -3,6 +3,9 @@ from random import randint
 print("----------------------------------------------------------------")
 print("                         Welcome To My Game")
 print("----------------------------------------------------------------\n")
+print("Rules:")
+print("  First letter of choice must be capital")
+print("  Type End or end to finish game\n")
 print("_CHOOSE YOUR WEAPON_\n")
 c_points = 0
 p_points = 0
@@ -14,92 +17,39 @@ while player == False:
     print("Choosing...")
     if player == computer:
         print("Computer chose the same as you, its a tie!")
-        answer = input("Do you want to play again")
-        while quit == False:
-            while True:
-                if answer == "yes" or "YES" or "Yes":
-                    quit == True
-                    break
-                elif answer == "no" or "NO" or "No":
-                    quit == False
-                    break 
     elif player == "Rock":
         if computer == "Paper":
             print("Computer chose Paper.You lost, better luck next time")
             c_points += 1
-            while quit == False:
-                while True:
-                    if answer == "yes" or "YES" or "Yes":
-                        quit == True
-                        break
-                    elif answer == "no" or "NO" or "No":
-                        quit == False
-                        break 
         else:
             print("Computer chose Scissors, you win!!")
             p_points += 1
-            while quit == False:
-                while True:
-                    if answer == "yes" or "YES" or "Yes":
-                        quit == True
-                        break
-                    elif answer == "no" or "NO" or "No":
-                        quit == False
-                        break 
     elif player == "Paper":
         if computer == "Scissors":
             print("Computer chose Scissors.You lost, better luck next time")
             c_points += 1
-            while quit == False:
-                while True:
-                    if answer == "yes" or "YES" or "Yes":
-                        quit == True
-                        break
-                    elif answer == "no" or "NO" or "No":
-                        quit == False
-                        break 
         else:
             print("Computer chose Rock, you win!!")
             p_points += 1
-            while quit == False:
-                while True:
-                    if answer == "yes" or "YES" or "Yes":
-                        quit == True
-                        break
-                    elif answer == "no" or "NO" or "No":
-                        quit == False
-                        break 
     elif player == "Scissors":
         if computer == "Rock":
             print("Computer chose Rock.You lost, better luck next time")
             c_points += 1
-            while quit == False:
-                while True:
-                    if answer == "yes" or "YES" or "Yes":
-                        quit == True
-                        break
-                    elif answer == "no" or "NO" or "No":
-                        quit == False
-                        break 
         else:
             print("Computer chose Paper, you win!!")
             p_points += 1
-            while quit == False:
-                while True:
-                    if answer == "yes" or "YES" or "Yes":
-                        quit == True
-                        break
-                    elif answer == "no" or "NO" or "No":
-                        quit == False
-                        break 
     else:
         print("Please check your spelling")
+PlayAgain = input("*Do you want to play again*")
+if PlayAgain == "YES" or "yes" or "Yes":
     # This is written so that the code repeats
     player = False
     computer = c[randint(0,2)]
-print("Player points:",p_points)
-print("Computer points:",c_points)
-if p_points > c_points:
-    print("PLAYER WINS")
-else:
-    print("COMPUTER WINS")
+    print("Your points:",p_points)
+    print("Computer points:",c_points)
+    if p_points > c_points:
+        print("YOU WIN!")
+    elif p_points == c_points:
+        print("IT'S A TIE!")
+    else:
+        print("COMPUTER WINS!")
