@@ -1,5 +1,5 @@
 # I did take a little help for the 'False' Statements
-# Since this program has a quit function a downloaded pthon compiler closes fully, so therefore please use an online python compiler so the end results can be seen. Thank you
+# Since this program has a quit function a downloaded pthon compiler closes, so therefore please use an online python compiler so the end results can be seen. It was the only way i could have stopped the program if the player was done playing. Thank you
 from random import randint
 print("----------------------------------------------------------------")
 print("            Welcome To My Rock, Paper, Scissors Game")
