@@ -17,7 +17,7 @@ while player == False:
     player = input("Rock, Paper or Scissors:")
     print("Choosing...")
     if player == computer:
-        print("Computer chose the same as you, its a tie!")
+        print("Computer chose", player, "as well, its a tie!")
         while True:
             userchoice =input("*Do you want to play again*")
             if userchoice in ["Yes", "yes", "YES", "YEs"]:
