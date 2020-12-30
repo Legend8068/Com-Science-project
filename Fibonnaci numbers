@@ -5,10 +5,10 @@ count = 0
 if num <= 0:
    print("Please enter a number above 0")
 elif num == 1:
-   print("Fibonacci sequence is")
+   print("The Fibonacci Sequence is")
    print(num1)
 else:
-   print("Fibonacci sequence is")
+   print("The Fibonacci Sequence is")
    while count < num:
        print(num1)
        n = num1 + num2
