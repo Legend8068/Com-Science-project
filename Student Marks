@@ -1,111 +1,80 @@
-OverallH = 0
-OverallL = 100
-OverallTot = 0
-Count = 0
-SubjectName = input("Enter the subject's name:")
-if SubjectName == "Maths" or "maths":   
-    SubjectH = 0
-    SubjectL = 100
-    SubjectTot= 0
-    Mark = int(input("Enter the students's marks for the subject:"))
-    if Mark < 101 and Mark > -1:
-        if Mark < OverallL:
-            OverallL = Mark
-            Count += 1
-        elif Mark < SubjectL:
-            SubjectL = Mark
-            Count += 1
-        elif Mark > OverallH:
-            OverallH = Mark
-            Count += 1
-        elif Mark > SubjectH: 
-            SubjectH = Mark
-            Count += 1
-        elif Count > 2:
-            print("All marks have been inputed")
-        else:
-          print("Please enter a valid mark")
-    OverallTot += Mark
-    SubjectTot += Mark
-elif SubjectName == "Science" or "science":   
-    SubjectH = 0
-    SubjectL = 100
-    SubjectTot= 0
-    Mark = int(input("Enter the students's marks for the subject:"))
-    if Mark < 101 and Mark > -1:
-        if Mark < OverallL:
-            OverallL = Mark
-            Count += 1
-        elif Mark < SubjectL:
-            SubjectL = Mark
-            Count += 1
-        elif Mark > OverallH:
-            OverallH = Mark
-            Count += 1
-        elif Mark > SubjectH: 
-            SubjectH = Mark
-            Count += 1
-        elif Count > 2:
-            print("All marks have been inputed")
-        else:
-          print("Please enter a valid mark")
-    OverallTot += Mark
-    SubjectTot += Mark
-elif SubjectName == "English" or "english":   
-    SubjectH = 0
-    SubjectL = 100
-    SubjectTot= 0
-    Mark = int(input("Enter the students's marks for the subject:"))
-    if Mark < 101 and Mark > -1:
-        if Mark < OverallL:
-            OverallL = Mark
-            Count += 1
-        elif Mark < SubjectL:
-            SubjectL = Mark
-            Count += 1
-        elif Mark > OverallH:
-            OverallH = Mark
-            Count += 1
-        elif Mark > SubjectH: 
-            SubjectH = Mark
-            Count += 1
-        elif Count > 2:
-            print("All marks have been inputed")
-        else:
-          print("Please enter a valid mark")
-    OverallTot += Mark
-    SubjectTot += Mark
-elif SubjectName == "IT" or "it" or "It":   
-    SubjectH = 0
-    SubjectL = 100
-    SubjectTot= 0
-    Mark = int(input("Enter the students's marks for the subject:"))
-    if Mark < 101 and Mark > -1:
-        if Mark < OverallL:
-            OverallL = Mark
-            Count += 1
-        elif Mark < SubjectL:
-            SubjectL = Mark
-            Count += 1
-        elif Mark > OverallH:
-            OverallH = Mark
-            Count += 1
-        elif Mark > SubjectH: 
-            SubjectH = Mark
-            Count += 1
-        elif Count > 2:
-            print("All marks have been inputed")
-        else:
-          print("Please enter a valid mark")
-    OverallTot += Mark
-    SubjectTot += Mark
-else:
-    print("Please enter a valid subject or check your spelling")
-SubjectAvg = SubjectTot/2
-OverallAvg = OverallTot/4
-print("Subject highest is", SubjectH)
-print("Subject lowest is", SubjectL)
-print("Subject average is", SubjectAvg)
-print("Overall highest is", OverallH)
-print("Overall lowest is", OverallL)
-print("Overall average is", OverallAvg)
+MathH = 0
+MathL = 100
+MathSum = 0
+EnglishH = 0
+EnglishL = 100
+EnglishSum = 0
+ScienceH = 0
+ScienceL = 100
+ScienceSum = 0
+ITH = 0
+ITL = 100
+ITSum = 0
+#Change this to a smaller number to test the program
+StudentCount = 600
+for Results in range(0,StudentCount):
+    Math = int(input("Enter Math marks:"))
+    if Math > 100 or Math < 0:
+        print("Mark is invalid, start over")
+    if Math > MathH:
+        MathH = Math
+    if Math < MathL:
+        MathL = Math
+    MathSum += Math
+    English = int(input("Enter English marks:"))
+    if English > 100 or English < 0:
+        print("Mark is invalid, start over")
+    if English > EnglishH:
+        EnglishH = English
+    if English < EnglishL:
+        EnglishL = English
+        EnglishSum += English
+    Science = int(input("Enter science marks:"))
+    if Science > 100 or Science < 0:
+        print("Mark is invalid, start over")
+    if Science > ScienceH:
+        ScienceH = Science
+    if Science < ScienceL:
+        ScienceL = Science
+    ScienceSum += Science
+    IT = int(input("Enter IT marks:"))
+    if IT > 100 or IT < 0:
+        print("Mark is invalid, start over")
+    if IT > ITH:
+        ITH = IT
+    if IT < ITL:
+        ITL = IT
+    ITSum += IT
+MathAvg = MathSum/StudentCount
+print("The highest marks for math is", MathH)
+print("The lowest marks for maths is", MathL)
+print("The average marks for math is", MathAvg)
+EnglishAvg = EnglishSum/StudentCount
+print("The highest marks for english is", EnglishH)
+print("The lowest marks for english is", EnglishL)
+print("The average marks for english is", EnglishAvg)
+ScienceAvg = ScienceSum/StudentCount
+print("The highest marks for science is", ScienceH)
+print("The lowest marks for science is", ScienceL)
+print("The average marks for science is", ScienceAvg)
+ITAvg = ITSum/StudentCount
+print("The highest marks for IT is", ITH)
+print("The lowest marks for IT is", ITL)
+print("The average marks for IT is", ITAvg)
+print("The overall average for all subjects is",(MathSum+ScienceSum+EnglishSum+ITSum)/(StudentCount*4))
+if MathL <= ScienceL and MathL <= ITL and MathL <= EnglishL:
+    print("The lowest overall mark is",MathL,"in Maths")
+if ScienceL <= MathL and ScienceL <= ITL and ScienceL <= EnglishL:
+    print("The lowest overal mark is",ScienceL,"in Science")
+if EnglishL <= MathL and EnglishL <= ITL and EnglishL <= ScienceL:
+    print("The lowest overall mark is",EnglishL,"in English")
+if ITL <= ScienceL and ITL <= MathL and ITL <= EnglishL:
+    print("The lowest overall mark is",ITL,"in IT")
+if MathH >= ScienceH and MathH >= ITH and MathH >= EnglishH:
+    print("The highest overall mark is",MathH,"in Maths")
+if ScienceL >= MathL and ScienceL >= ITL and ScienceL >= EnglishL:
+    print("The highest overall mark is",ScienceH,"in Science")
+if EnglishL >= MathL and EnglishL >= ITL and EnglishL >= ScienceL:
+    print("The highest mark is",EnglishH,"in English")
+if ITL >= ScienceL and ITL >= MathL and ITL >= EnglishL:
+    print("The highest overall mark is",ITH,"in IT")
