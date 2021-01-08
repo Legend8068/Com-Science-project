@@ -63,18 +63,18 @@ print("The lowest marks for IT is", ITL)
 print("The average marks for IT is", ITAvg)
 print("The overall average for all subjects is",(MathSum+ScienceSum+EnglishSum+ITSum)/(StudentCount*4))
 if MathL <= ScienceL and MathL <= ITL and MathL <= EnglishL:
-    print("The lowest overall mark is",MathL,"in Maths")
+    print("The lowest overall mark is",MathL,"from Maths")
 if ScienceL <= MathL and ScienceL <= ITL and ScienceL <= EnglishL:
-    print("The lowest overal mark is",ScienceL,"in Science")
+    print("The lowest overal mark is",ScienceL,"from Science")
 if EnglishL <= MathL and EnglishL <= ITL and EnglishL <= ScienceL:
-    print("The lowest overall mark is",EnglishL,"in English")
+    print("The lowest overall mark is",EnglishL,"from English")
 if ITL <= ScienceL and ITL <= MathL and ITL <= EnglishL:
-    print("The lowest overall mark is",ITL,"in IT")
+    print("The lowest overall mark is",ITL,"from IT")
 if MathH >= ScienceH and MathH >= ITH and MathH >= EnglishH:
-    print("The highest overall mark is",MathH,"in Maths")
+    print("The highest overall mark is",MathH,"from Maths")
 if ScienceL >= MathL and ScienceL >= ITL and ScienceL >= EnglishL:
-    print("The highest overall mark is",ScienceH,"in Science")
+    print("The highest overall mark is",ScienceH,"from Science")
 if EnglishL >= MathL and EnglishL >= ITL and EnglishL >= ScienceL:
-    print("The highest mark is",EnglishH,"in English")
+    print("The highest overall mark is",EnglishH,"from English")
 if ITL >= ScienceL and ITL >= MathL and ITL >= EnglishL:
-    print("The highest overall mark is",ITH,"in IT")
+    print("The highest overall mark is",ITH,"from IT")
