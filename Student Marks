@@ -10,8 +10,8 @@ ScienceSum = 0
 ITH = 0
 ITL = 100
 ITSum = 0
-# Change this to a smaller number to test the program
-StudentCount = 600
+#Change this to a smaller number to test the program
+StudentCount = 2
 for Results in range(0,StudentCount):
     Math = int(input("Enter Math marks:"))
     if Math > 100 or Math < 0:
@@ -46,35 +46,35 @@ for Results in range(0,StudentCount):
         ITL = IT
     ITSum += IT
 MathAvg = MathSum/StudentCount
-print("The lowest marks for maths is", MathL)
 print("The highest marks for math is", MathH)
+print("The lowest marks for maths is", MathL)
 print("The average marks for math is", MathAvg)
 EnglishAvg = EnglishSum/StudentCount
-print("The lowest marks for english is", EnglishL)
 print("The highest marks for english is", EnglishH)
+print("The lowest marks for english is", EnglishL)
 print("The average marks for english is", EnglishAvg)
 ScienceAvg = ScienceSum/StudentCount
-print("The lowest marks for science is", ScienceL)
 print("The highest marks for science is", ScienceH)
+print("The lowest marks for science is", ScienceL)
 print("The average marks for science is", ScienceAvg)
 ITAvg = ITSum/StudentCount
-print("The lowest marks for IT is", ITL)
 print("The highest marks for IT is", ITH)
+print("The lowest marks for IT is", ITL)
 print("The average marks for IT is", ITAvg)
 if MathL <= ScienceL and MathL <= ITL and MathL <= EnglishL:
     print("The lowest overall mark is",MathL,"from Maths")
-if ScienceL <= MathL and ScienceL <= ITL and ScienceL <= EnglishL:
-    print("The lowest overal mark is",ScienceL,"from Science")
 if EnglishL <= MathL and EnglishL <= ITL and EnglishL <= ScienceL:
-    print("The lowest overall mark is",EnglishL,"from English")
+    print("The lowest overal mark is",EnglishL,"from Science")
+if ScienceL <= MathL and ScienceL <= ITL and ScienceL <= EnglishL:
+    print("The lowest overall mark is",ScienceL,"from English")
 if ITL <= ScienceL and ITL <= MathL and ITL <= EnglishL:
     print("The lowest overall mark is",ITL,"from IT")
 if MathH >= ScienceH and MathH >= ITH and MathH >= EnglishH:
     print("The highest overall mark is",MathH,"from Maths")
-if ScienceL >= MathL and ScienceL >= ITL and ScienceL >= EnglishL:
-    print("The highest overall mark is",ScienceH,"from Science")
-if EnglishL >= MathL and EnglishL >= ITL and EnglishL >= ScienceL:
-    print("The highest overall mark is",EnglishH,"from English")
-if ITL >= ScienceL and ITL >= MathL and ITL >= EnglishL:
+if EnglishH >= MathH and EnglishH >= ITH and EnglishH >= ScienceH:
+    print("The highest overall mark is",EnglishH,"from Science")
+if ScienceH >= MathH and ScienceH >= ITH and ScienceH >= EnglishH:
+    print("The highest overall mark is",ScienceH,"from English")
+if ITH >= ScienceH and ITH >= MathH and ITH >= EnglishH:
     print("The highest overall mark is",ITH,"from IT")
 print("The overall average for all subjects is",(MathSum+ScienceSum+EnglishSum+ITSum)/(StudentCount*4))
